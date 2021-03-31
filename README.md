@@ -1,6 +1,6 @@
 # King County Home Price Analysis
 
-This repository offers an analysis of factors that influence housing prices in King County, WA
+This repository offers an analysis of factors that influence housing prices in King County, WA.
 
 ## This Repository
 
@@ -29,30 +29,38 @@ This repository offers an analysis of factors that influence housing prices in K
 1. [Final Analysis Notebook](notebooks/exploratory/final_notebook.ipynb)
 2. [Presentation Slides](reports/presentation.pdf)
 
-### Setup Instructions
 
-TODO: add setup instructions (e.g. the name of the Conda environment file)
+## Overview
+
+Overview
+This project analyzes sale price of homes in King County, WA in order to make recommendations to homeowners on improvements they can make to their homes to fetch a higher sell price. This analysis uses data from multiple datasets and only contains records of complete and relevant data. It also uses additional colums that were calculated using these datasets. The data analysis attempts to show the both the negative and positive relationships between Sale Price and several features, including number of bathrooms, bedrooms, total living area, and view utilization.
+
 
 ## Business Understanding
 
-TODO: add business understanding
+This data analysis aims to answer questions about home sales in King County, WA. In particular, this analysis aims to investigate, what improvements can be made to homes in order increase the selling price.
 
 ## Data Understanding
 
-TODO: add data understanding, including at least 3 high-quality visualizations
+The data was displayed in a heatmap to display variables and their correlation to Sale Price. The plots of several select variables showed the was heavily skewed. To address that, extreme outliers were exluded and a log tranformation of the target variable was performed in order to normalize the data for further use in this analysis.
+
+
+
 
 ## Data Preparation
 
-TODO: add data preparation (which can be quite brief, but make sure you explain any dropped records)
+Parcel,  Residential, and Real Property Sales data were filtered to focus on homes that will satisfy the requirements of this project. Mobile homes and all condos were excluded to focus on one type of property. Additionally, filtering homes with at least 1 bathroom, a Sale Price greater than zero, may be helpful in this analysis.
 
 ## Modeling
 
-TODO: add modeling.  What are the features of your final model?
+The final model with the target variable Sale Price included three features: Total Living Space(SqFtTotLiving), Total Bathrooms, and ViewUtilization. 
 
 ## Evaluation
 
-TODO: add evaluation.  How well does your model meet the assumptions of linear regression?
+The model underwent three interations, each time investigating how well the model address the four assumptions of linear regressions: Linearity, Normality, Homoscadacity. When multuple independent variables were included, the assumption of Independence was also included. While each iteration of the model violated these assumptions, the final model showed improvement compared the second iteration in Linearity, Normality, Homoscadacity, and Independence. 
 
 ## Conclusion
+The model presents that about 26% of Sale Price is attributed to View Utilization, Total Bedrooms, and Total Living Space.
 
-TODO: add conclusion.  How does your model answer the business question?
+- Homes that utilized their view tended to have a higher sale price.
+- Homes with more bedrooms and total living space tended to have a higher sale price.
