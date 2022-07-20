@@ -2,7 +2,7 @@
 
 # King County Home Price Analysis
 
-![GitHub last commit](https://img.shields.io/github/last-commit/smartbre/)<br/>
+![GitHub last commit](https://img.shields.io/github/last-commit/smartbre/110920-pt-phase-2-project)<br/>
 
 This repository offers an analysis of factors that influence housing prices in King County, WA.
 
